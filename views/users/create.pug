@@ -1,0 +1,18 @@
+extend ../layout/common.pug
+block content
+
+    h1 Create
+    //- If has error in errors => 
+    if errors 
+        each error in errors 
+            .alert.alert-danger= error
+    //- 
+    form(action="/users/create", method="POST")
+        .form-group
+            label(class="font-weight-light" for="name") Name
+            input#name.form-control(type="text", name="name" value= values? values.name: '')
+
+        .form-group
+            label(class="font-weight-light" for="phone") Phone
+            input#phone.form-control(type="text", name="phone" alue= values? values.phone: '')        
+        button(class="btn btn-primary mt-3") Create
