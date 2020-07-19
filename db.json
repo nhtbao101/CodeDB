@@ -2,21 +2,22 @@
   "users": [
     {
       "name": "Bao",
-      "id": "PfMa5qj89"
-    },
-    {
-      "name": "Long",
-      "id": "s8QeXu_28"
-    },
-    {
-      "name": "",
-      "phone": "",
-      "id": "tI-1NAQSp"
+      "phone": "1234",
+      "id": "5bQhfgFg0",
+      "email": "thaibao190",
+      "password": "123456"
     },
     {
       "name": "Thao",
-      "phone": "12345",
-      "id": "tydWDVgmL"
+      "phone": "4567",
+      "id": "cnMLs7BZv",
+      "email": "vanthao99",
+      "password": "mclxo00"
+    },
+    {
+      "name": "Long",
+      "phone": "5463",
+      "id": "_P2mObV5A"
     }
   ]
 }
