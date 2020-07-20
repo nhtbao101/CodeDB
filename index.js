@@ -1,8 +1,9 @@
+console.log(process.env);
 const express = require('express');
 const userRoute = require('./routers/user.router');
 const authRoute = require('./routers/auth.router');
 const authMiddleware = require('./middleware/auth.middleware');
-var cookieParser = require('cookie-parser');
+const cookieParser = require('cookie-parser');
 
 const app = express();
 const post = 3001;
@@ -14,7 +15,7 @@ app.set('views', './views');
 app.use(express.json()); // for parsing application/json
 app.use(express.urlencoded({ extended: true }));
 
-app.use(cookieParser());
+app.use(cookieParser(process.env.SESSION_SECRET));
 
 app.get('/', (req, res) => res.render('index'));
 

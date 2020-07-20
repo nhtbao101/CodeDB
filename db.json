@@ -8,16 +8,23 @@
       "password": "123456"
     },
     {
-      "name": "Thao",
+      "name": "Nguyen",
       "phone": "4567",
       "id": "cnMLs7BZv",
-      "email": "vanthao99",
+      "email": "nguyen@gmail.com",
       "password": "mclxo00"
     },
     {
       "name": "Long",
       "phone": "5463",
-      "id": "_P2mObV5A"
+      "id": "_P2mObV5A",
+      "email": "long123",
+      "password": "111111"
+    },
+    {
+      "name": "Hoang",
+      "phone": "0909",
+      "id": "hKf6xz0bB"
     }
   ]
 }

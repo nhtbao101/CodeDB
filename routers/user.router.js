@@ -2,15 +2,15 @@ const express = require('express');
 const controller = require('../controllers/users.controller');
 const authMiddleware = require('../middleware/auth.middleware');
 const validation = require('../validation/user.validation');
-var router = express.Router();
+const router = express.Router();
 
-router.get('/', authMiddleware.requireAuth, controller.index);
+router.get('/', controller.index);
 
 //search with keyword
-router.get('/search', authMiddleware.requireAuth, controller.search);
+router.get('/search',  controller.search);
 
 router.get('/cookie', (req, res, next) => {
-    res.cookie('user-id', 1234);
+    res.cookie('userId', 1234);
     res.send('hello');
 });
 
