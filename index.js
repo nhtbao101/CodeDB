@@ -3,6 +3,7 @@ console.log(process.env.SESSION_SECRET);
 const express = require('express');
 const userRoute = require('./routers/user.router');
 const authRoute = require('./routers/auth.router');
+const productRoute = require('./routers/product.router');
 const authMiddleware = require('./middleware/auth.middleware');
 const cookieParser = require('cookie-parser');
 
@@ -25,5 +26,6 @@ app.use(express.static('public'));
 
 app.use('/users', authMiddleware.requireAuth, userRoute);
 app.use('/auth', authRoute)
+app.use('/products', authMiddleware.requireAuth, productRoute);
 
 app.listen(post, (req, res) => console.log(`Server listening on ${post}`));
