@@ -749,5 +749,19 @@
       "description": "est donec odio justo sollicitudin ut suscipit a feugiat et eros vestibulum ac est lacinia nisi venenatis tristique",
       "price": 3025
     }
+  ],
+  "session": [],
+  "sessions": [
+    {
+      "id": "blKsDKV0A"
+    },
+    {
+      "id": "x_T5ePsRQ",
+      "cart": {
+        "f2b5c235-d229-4b98-ac66-bd778cf2149c": 1,
+        "ac4d1c88-9321-49bc-ac85-ea1bdc85428a": 3,
+        "7acd2f55-7b85-4657-b532-4e6e23285d72": 1
+      }
+    }
   ]
 }
