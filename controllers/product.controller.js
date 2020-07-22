@@ -1,4 +1,5 @@
 const db = require('../db');
+const { query } = require('express');
 
 module.exports.index = (function(req, res){
     let page = parseInt(req.query.page) || 1; //n
@@ -15,13 +16,14 @@ module.exports.index = (function(req, res){
 });
 
 module.exports.search = ((req, res) => {
-    var key = req.query.q;
+    var querySearch = req.query.querySearch;
     var matchProduct = db.get('products').value().filter(product => {
-        return product.name.toLowerCase().indexOf(key.toLowerCase()) !== -1;
+        return product.name.toLowerCase().indexOf(querySearch.toLowerCase()) !== -1;
     });
     res.render('products/index', {
         products: matchProduct
     }); 
+    req.query.q = q;
 });
 
 

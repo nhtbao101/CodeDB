@@ -1,10 +1,13 @@
 extend ../layout/common.pug
 block content
-    h1 Product list   
+    div(class="d-flex justify-content-end")
+        button(class="btn btn-outline-info") Cart
+    h1 Product list
+
     .d-flex.align-items-center         
-        form.ml-auto(action="/product/search" method="GET" class="d-flex") 
-            input(type="text" name="key" class="form-control")
-            button(class="btn btn-primary ml-2" ) Search 
+        form.ml-auto(action="/products/search" method="GET" class="d-flex") 
+            input(type="text" name="querySearch" class="form-control")
+            button(class="btn btn-primary ml-2") Search
 
     .row
         each product in products
@@ -15,18 +18,3 @@ block content
                         h5.card-title= product.name
                         p.card-text= product.description
                         a.btn.btn-primary(href='/cart/add/'+ product.id) Add to cart
-        //- table
-        //-     tr(class="mr-3 pd-3")
-        //-         td
-        //-             div(class="d-block")
-        //-                 span= product.name
-        //-                 span= product.price
-        //-                 img(src=product.image)
-        //-                 button(class="btn btn-primary mt-3") Add to Card
-        //-         td
-                    
-        //-         td
-                   
-        //-         td
-                   
-        
