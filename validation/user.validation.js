@@ -1,10 +1,13 @@
 module.exports.postCreate = function(req, res, next){
     var errors = [];
-    if (!req.body.name){
-        errors.push('Name is required ... ');
+    let special = "`~!@#$%^&*()<>?:{},./;[]";
+    let name = req.body.name;
+    let phone = req.body.phone;
+    if (!name){
+        errors.push('Name is invalid !!! ');
     }
-    if (!req.body.phone){
-        errors.push('Phone is required ... ');
+    if (!phone){
+        errors.push('Phone is invalid !!! ');
     }
     if (errors.length){
         res.render('users/create',{
